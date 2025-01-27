@@ -1,6 +1,6 @@
 # Politique de confidentialité de l'application Nérimo
 
-**Dernière mise à jour : [Date actuelle]**
+**Dernière mise à jour : 27/02/2024**
 
 Chez **Nérimo**, nous accordons une grande importance à la confidentialité et à la protection des données personnelles de nos utilisateurs. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons et quels sont vos droits en tant qu'utilisateur.
 
