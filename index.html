@@ -3,72 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de confidentialité</title>
+    <title>Politique de confidentialité - Nérimo</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             background-color: #fcf5f8;
             color: #23363E;
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1, h2 {
             color: #825C6E;
         }
+
         h1 {
-            font-size: 2em;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #825C6E;
+            padding-bottom: 5px;
+        }
+
+        .section {
             margin-bottom: 20px;
         }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
+
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
+
         a {
             color: #23363E;
             text-decoration: none;
+            font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Barre de navigation */
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #825C6E;
+            border-radius: 10px;
+        }
+
+        .nav a {
+            color: #fcf5f8;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #825C6E;
+            color: #fcf5f8;
+            margin-top: 30px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Politique de confidentialité de l'application Nérimo</h1>
-    <p><strong>Dernière mise à jour :</strong> 27/02/2024</p>
-    <p>Chez <strong>Nérimo</strong>, nous accordons une grande importance à la confidentialité et à la protection des données personnelles de nos utilisateurs. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons et quels sont vos droits en tant qu’utilisateur.</p>
-    
-    <h2>1. Données collectées</h2>
-    <p>Nous collectons uniquement les informations nécessaires à la création et à la gestion de votre compte :</p>
-    <ul>
-        <li><strong>Adresse e-mail</strong> : utilisée pour créer un compte, vous connecter à l’application, et gérer votre profil.</li>
-    </ul>
-    
-    <h2>2. Utilisation des données</h2>
-    <p>Les données collectées sont utilisées uniquement pour :</p>
-    <ul>
-        <li>Permettre la création et la gestion de votre compte.</li>
-        <li>Vous authentifier lors de la connexion à l’application.</li>
-    </ul>
-    
-    <h2>3. Partage des données</h2>
-    <p>Vos données ne sont <strong>pas partagées</strong> avec des tiers. Nous ne transmettons ni ne vendons vos informations personnelles à des partenaires, annonceurs ou toute autre entité extérieure.</p>
-    
-    <h2>4. Conservation des données</h2>
-    <p>Vos données sont stockées dans une base de données sécurisée située en Europe (<strong>MongoDB</strong>). Nous conservons vos informations aussi longtemps que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment (voir Section 6).</p>
-    
-    <h2>5. Transfert des données</h2>
-    <p>Vos données sont hébergées dans l’Union Européenne et ne sont pas transférées en dehors de cette zone.</p>
-    
-    <h2>6. Droits des utilisateurs</h2>
-    <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
-    <ul>
-        <li><strong>Droit d’accès</strong> : vous pouvez demander quelles informations nous détenons sur vous.</li>
-        <li><strong>Droit de rectification</strong> : vous pouvez mettre à jour ou corriger vos données.</li>
-        <li><strong>Droit de suppression</strong> : vous pouvez supprimer votre compte directement depuis votre profil dans l’application.</li>
-        <li><strong>Droit d’opposition</strong> : vous pouvez demander à ce que vos données ne soient plus utilisées.</li>
-    </ul>
-    <p>Pour exercer vos droits ou pose
+
+    <div class="container">
+
+        <h1>Politique de confidentialité</h1>
+        <p style="text-align: center;"><strong>Dernière mise à jour :</strong> 27/02/2024</p>
+
+        <!-- Barre de navigation -->
+        <div class="nav">
+            <a href="#donnees">Données collectées</a> |
+            <a href="#utilisation">Utilisation</a> |
+            <a href="#partage">Partage</a> |
+            <a href="#droits">Droits</a> |
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="section" id="donnees">
+            <h2>1. Données collectées</h2>
+            <p>Nous collectons uniquement les informations nécessaires à la création et à la gestion de votre compte :</p>
+            <ul>
+                <li><strong>Adresse e-mail</strong> : utilisée pour créer un compte, vous connecter à l’application, et gérer votre profil.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="utilisation">
+            <h2>2. Utilisation des données</h2>
+            <p>Les données collectées sont utilisées uniquement pour :</p>
+            <ul>
+                <li>Permettre la création et la gestion de votre compte.</li>
+                <li>Vous authentifier lors de la connexion à l’application.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="partage">
+            <h2>3. Partage des données</h2>
+            <p>Vos données ne sont <strong>pas partagées</strong> avec des tiers. Nous ne transmettons ni ne vendons vos informations personnelles à des partenaires, annonceurs ou toute autre entité extérieure.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Conservation des données</h2>
+            <p>Vos données sont stockées dans une base de données sécurisée située en Europe (<strong>MongoDB</strong>). Nous conservons vos informations aussi longtemps que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment (voir Section 6).</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Transfert des données</h2>
+            <p>Vos données sont hébergées dans l’Union Européenne et ne sont pas transférées en dehors de cette zone.</p>
+        </div>
+
+        <div class="section" id="droits">
+            <h2>6. Droits des utilisateurs</h2>
+            <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+            <ul>
+                <li><strong>Droit d’accès</strong> : vous pouvez demander quelles informations nous détenons sur vous.</li>
+                <li><strong>Droit de rectification</strong> : vous pouvez mettre à jour ou corriger vos données.</li>
+                <li><strong>Droit de suppression</strong> : vous pouvez supprimer votre compte directement depuis votre profil dans l’application.</li>
+                <li><strong>Droit d’opposition</strong> : vous pouvez demander à ce que vos données ne soient plus utilisées.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>7. Contact</h2>
+            <p>Pour toute question ou demande relative à cette politique de confidentialité, vous pouvez nous contacter à l’adresse suivante :</p>
+            <p><a href="mailto:neis.zonca.cros@gmail.com">neis.zonca.cros@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Nérimo - Tous droits réservés</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
