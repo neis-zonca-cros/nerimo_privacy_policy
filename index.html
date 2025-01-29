@@ -5,30 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de confidentialité - Nérimo</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
         /* Global */
         body {
             background-color: #fcf5f8;
             color: #23363E;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out forwards;
         }
 
+        /* Animation d'apparition */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Conteneur principal */
         .container {
             max-width: 800px;
             width: 90%;
             margin: 40px auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Titres */
         h1, h2 {
             color: #825C6E;
         }
@@ -36,90 +47,71 @@
         h1 {
             text-align: center;
             font-size: 2.2em;
+            font-weight: 600;
         }
 
         h2 {
             margin-top: 30px;
             border-bottom: 2px solid #825C6E;
             padding-bottom: 5px;
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        a {
-            color: #23363E;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            font-size: 1.5em;
         }
 
         /* Barre de navigation */
         .nav {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
-            padding: 10px;
-            background: rgba(130, 92, 110, 0.15); /* Légèrement transparent */
-            border-radius: 10px;
+            padding: 12px;
+            background: rgba(130, 92, 110, 0.15);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
         }
-        
-        /* Style des liens (ressemblent à des boutons) */
+
+        /* Liens de navigation modernisés */
         .nav a {
-            background: #825C6E;
-            color: #fcf5f8;
-            font-weight: bold;
-            padding: 8px 16px;
+            background: linear-gradient(135deg, #825C6E, #A47B8E);
+            color: #fff;
+            font-weight: 500;
+            padding: 10px 18px;
             border-radius: 25px;
             text-align: center;
-            transition: background 0.3s, transform 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
             font-size: 0.9em;
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
         }
-        
-        /* Icônes à côté des boutons */
+
+        /* Effet au survol */
+        .nav a:hover {
+            background: linear-gradient(135deg, #A47B8E, #825C6E);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icônes pour les liens */
         .nav a::before {
-            content: "📌"; /* Icône par défaut */
+            content: "⏺"; /* Par défaut */
         }
-        
+
         .nav a[href="#donnees"]::before { content: "📂"; }
         .nav a[href="#utilisation"]::before { content: "⚙️"; }
         .nav a[href="#partage"]::before { content: "🔄"; }
         .nav a[href="#droits"]::before { content: "🔐"; }
         .nav a[href="#contact"]::before { content: "📧"; }
-        
-        /* Effet au survol */
-        .nav a:hover {
-            background: rgba(130, 92, 110, 0.8);
-            transform: scale(1.05);
-        }
-        
-        /* Mobile : Affichage plus compact */
-        @media (max-width: 768px) {
-            .nav {
-                flex-wrap: wrap;
-                padding: 8px;
-                gap: 5px;
-            }
-        
-            .nav a {
-                font-size: 0.85em;
-                padding: 6px 12px;
-                border-radius: 20px;
-            }
+
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         /* Footer */
@@ -129,10 +121,32 @@
             background: #825C6E;
             color: #fcf5f8;
             margin-top: 30px;
-            border-radius: 10px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 300;
         }
 
-        /* RESPONSIVITÉ */
+        /* Bouton retour en haut */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #A47B8E;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #back-to-top:hover {
+            background: #825C6E;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -148,9 +162,15 @@
             }
 
             .nav {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .nav a {
+                font-size: 0.85em;
+                padding: 8px 14px;
+                border-radius: 20px;
             }
         }
     </style>
@@ -160,7 +180,7 @@
     <div class="container">
 
         <h1>Politique de confidentialité</h1>
-        <p style="text-align: center;"><strong>Dernière mise à jour :</strong> 27/02/2024</p>
+        <p style="text-align: center;"><strong>Dernière mise à jour :</strong> 27/01/2025</p>
 
         <!-- Barre de navigation -->
         <div class="nav">
@@ -188,43 +208,24 @@
             </ul>
         </div>
 
-        <div class="section" id="partage">
-            <h2>3. Partage des données</h2>
-            <p>Vos données ne sont <strong>pas partagées</strong> avec des tiers. Nous ne transmettons ni ne vendons vos informations personnelles à des partenaires, annonceurs ou toute autre entité extérieure.</p>
-        </div>
-
-        <div class="section">
-            <h2>4. Conservation des données</h2>
-            <p>Vos données sont stockées dans une base de données sécurisée située en Europe (<strong>MongoDB</strong>). Nous conservons vos informations aussi longtemps que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment (voir Section 6).</p>
-        </div>
-
-        <div class="section">
-            <h2>5. Transfert des données</h2>
-            <p>Vos données sont hébergées dans l’Union Européenne et ne sont pas transférées en dehors de cette zone.</p>
-        </div>
-
-        <div class="section" id="droits">
-            <h2>6. Droits des utilisateurs</h2>
-            <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
-            <ul>
-                <li><strong>Droit d’accès</strong> : vous pouvez demander quelles informations nous détenons sur vous.</li>
-                <li><strong>Droit de rectification</strong> : vous pouvez mettre à jour ou corriger vos données.</li>
-                <li><strong>Droit de suppression</strong> : vous pouvez supprimer votre compte directement depuis votre profil dans l’application.</li>
-                <li><strong>Droit d’opposition</strong> : vous pouvez demander à ce que vos données ne soient plus utilisées.</li>
-            </ul>
-        </div>
-
-        <div class="section" id="contact">
-            <h2>7. Contact</h2>
-            <p>Pour toute question ou demande relative à cette politique de confidentialité, vous pouvez nous contacter à l’adresse suivante :</p>
-            <p><a href="mailto:neis.zonca.cros@gmail.com">neis.zonca.cros@gmail.com</a></p>
-        </div>
-
         <div class="footer">
-            <p>&copy; 2024 Nérimo - Tous droits réservés</p>
+            <p>&copy; 2025 Nérimo - Tous droits réservés</p>
         </div>
 
     </div>
+
+    <!-- Bouton retour en haut -->
+    <div id="back-to-top" onclick="scrollToTop()">⬆</div>
+
+    <script>
+        window.onscroll = function() {
+            document.getElementById('back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
