@@ -65,7 +65,6 @@
             gap: 10px;
             margin-bottom: 20px;
             padding: 12px;
-            background: rgba(130, 92, 110, 0.15);
             border-radius: 12px;
             backdrop-filter: blur(10px);
         }
@@ -177,7 +176,7 @@
 </head>
 <body>
 
-    <div class="container">
+ <div class="container">
 
         <h1>Politique de confidentialité</h1>
         <p style="text-align: center;"><strong>Dernière mise à jour :</strong> 27/01/2025</p>
@@ -208,6 +207,38 @@
             </ul>
         </div>
 
+        <div class="section" id="partage">
+            <h2>3. Partage des données</h2>
+            <p>Vos données ne sont <strong>pas partagées</strong> avec des tiers. Nous ne transmettons ni ne vendons vos informations personnelles à des partenaires, annonceurs ou toute autre entité extérieure.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Conservation des données</h2>
+            <p>Vos données sont stockées dans une base de données sécurisée située en Europe (<strong>MongoDB</strong>). Nous conservons vos informations aussi longtemps que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment (voir Section 6).</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Transfert des données</h2>
+            <p>Vos données sont hébergées dans l’Union Européenne et ne sont pas transférées en dehors de cette zone.</p>
+        </div>
+
+        <div class="section" id="droits">
+            <h2>6. Droits des utilisateurs</h2>
+            <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+            <ul>
+                <li><strong>Droit d’accès</strong> : vous pouvez demander quelles informations nous détenons sur vous.</li>
+                <li><strong>Droit de rectification</strong> : vous pouvez mettre à jour ou corriger vos données.</li>
+                <li><strong>Droit de suppression</strong> : vous pouvez supprimer votre compte directement depuis votre profil dans l’application.</li>
+                <li><strong>Droit d’opposition</strong> : vous pouvez demander à ce que vos données ne soient plus utilisées.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>7. Contact</h2>
+            <p>Pour toute question ou demande relative à cette politique de confidentialité, vous pouvez nous contacter à l’adresse suivante :</p>
+            <p><a href="mailto:neis.zonca.cros@gmail.com">neis.zonca.cros@gmail.com</a></p>
+        </div>
+
         <div class="footer">
             <p>&copy; 2025 Nérimo - Tous droits réservés</p>
         </div>
@@ -219,7 +250,14 @@
 
     <script>
         window.onscroll = function() {
-            document.getElementById('back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+            let btn = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                btn.style.display = 'block';
+                btn.style.opacity = '1';
+            } else {
+                btn.style.opacity = '0';
+                setTimeout(() => btn.style.display = 'none', 300);
+            }
         };
 
         function scrollToTop() {
